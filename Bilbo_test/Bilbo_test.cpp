@@ -5,7 +5,8 @@
 
 int main()
 {
-    std::cout << "Porno\n";
+	std::cout << "Arseniy ne grusti a to pisa ne budet rasti";
+	std::cout << "Porno\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
