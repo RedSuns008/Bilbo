@@ -1,21 +1,54 @@
-// Bilbo_test.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+#include "time.h"
+#include "iostream"
+#include "cstdlib"
 
-#include <iostream>
-
-int main()
+class Player
 {
-	std::cout << "Arseniy ne grusti a to pisa ne budet rasti";
-	std::cout << "Porno\n";
+public:
+	int Attack = 10;
+	int Shield = 10;
+	int Health = 10;
+	
+	Player(int a) {
+		switch (a)
+		{
+		case 1:
+			std::cout << "Haker\n";
+			this->Attack += 10;
+			this->Health += 5;
+			this->Shield += 2;
+
+			break;
+		case 2:
+			std::cout << "Killer\n";
+			this->Attack += 15;
+			this->Health += 10;
+			this->Shield += 12;
+			break;
+		case 3:
+			std::cout << "Tank\n";
+			this->Attack += 5;
+			this->Health += 25;
+			this->Shield += 20;
+			
+			break;
+		case 4:
+			std::cout << "Vydo\n";
+			this->Attack += 20;
+			this->Health += 25;
+			this->Shield += 22;
+			break;
+		}
+		
+	
+	}
+
+};
+
+
+int main() {
+	int temp = rand() % 3 + 1;
+	Player player(temp);
+
+
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
