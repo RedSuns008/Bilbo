@@ -1,20 +1,149 @@
-// Bilbo_test.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// bilbo1.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
+#include <string>
+#include <vector>
+#include <time.h>
+using namespace std;
+
+enum class item {
+    gun, tommygun, cannon
+};
+
+string item_name[] = { "gun","tommygun","cannon" };
+
+class location {
+public:
+    string name;
+    vector<int> portal;
+    vector<item> items;
+};
+
+location room[4];
+struct {
+    int location;
+    vector<item> items;
+} player;
+
+
+void pick_by_name(string name_items) {
+
+    for (int i = 0; i < item_name->size(); i++) {
+
+        if (item_name[i] == name_items) {
+            for (int j = 0; j < room[player.location].items.size(); j++) {
+                if (item_name[i] == item_name[j]) {
+                    player.items.push_back((item)i);
+                    room[player.location].items.erase(room[player.location].items.begin() + j);
+                    return;
+                }
+            }
+        }
+
+    }
+
+}
+
 
 int main()
 {
-    std::cout << "Porno\n";
+    room[0].name = "arasaka tower";
+    room[0].portal.push_back(1);
+
+    room[1].name = "Northside";
+    room[1].portal.push_back(0);
+    room[1].portal.push_back(2);
+    room[1].items.push_back(item::cannon);
+    room[1].items.push_back(item::gun);
+
+    room[2].name = "Pacifika";
+    room[2].portal.push_back(1);
+    room[2].portal.push_back(3);
+
+    room[3].name = "Arrays";
+    room[3].portal.push_back(2);
+
+
+    player.location = 1;
+
+    string cmd;
+    while (true) {
+
+        std::cout << "your location " << room[player.location].name << "\n";
+        std::cin >> cmd;
+
+        if (cmd == "go") {
+
+            bool answer_is_correct = false;
+
+            while (!answer_is_correct)
+            {
+
+                int sz = room[player.location].portal.size();
+                for (int i = 0; i < sz; i++) {
+                    cout << "type " << i << " to go " << room[room[player.location].portal[i]].name << "\n";
+                }
+
+                int dir;
+                std::cin >> dir;
+
+                if (dir >= 0 && dir < sz) {
+                    player.location = room[player.location].portal[dir];
+                    answer_is_correct = true;
+                }
+                else
+                {
+                    cout << "incorrect input\n";
+
+                }
+            }
+        }
+
+        if (cmd == "list") {
+            int sz = room[player.location].items.size();
+            for (int i = 0; i < sz; i++) {
+                cout << item_name[(int)room[player.location].items[i]] << "\n";
+            }
+        }
+
+        if (cmd == "invent") {
+            int sz = player.items.size();
+            for (int i = 0; i < sz; i++) {
+                cout << item_name[(int)player.items[i]] << "\n";
+            }
+        }
+
+        //if (cmd == "d") {
+
+        //int sz = room[player.location].items.size();
+        /*for (int i = 0; i < sz; i++) {
+            cout << room[i].items << "\n";
+
+        }
+
+         }*/
+
+
+
+
+        if (cmd == "pick") {
+            int sz = room[player.location].portal.size();
+            for (int i = 0; i < sz; i++) {
+                cout << "type " << i << " to pick " << item_name[(int)room[player.location].items[i]] << "\n";
+            }
+
+            std::cin >> cmd;
+
+            pick_by_name(cmd);
+            cout << "done";
+            //player.items.emplace_back(room[player.location].items[i]);
+            //player.items.push_back(item::);
+            //room[player.location].items.erase(room[player.location].items.begin() + i);
+
+
+        }
+
+    }
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
