@@ -1,5 +1,37 @@
+//void pick_by_name(string name_items) {
+//
+//    for (int i = 0; i < item_name->size(); i++) {
+//
+//        if (item_name[i] == name_items) {
+//            for (int j = 0; j < room[player.location].items.size(); j++) {
+//                if (item_name[i] == item_name[j]) {
+//                    player.items.push_back((item)i);
+//                    room[player.location].items.erase(room[player.location].items.begin() + j);
+//                    return;
+//                }
+//            }
+//        }
+//
+//    }
+//
+//}//test
 // bilbo1.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #include <iostream>
 #include <string>
@@ -27,23 +59,6 @@ struct {
 } player;
 
 
-void pick_by_name(string name_items) {
-
-    for (int i = 0; i < item_name->size(); i++) {
-
-        if (item_name[i] == name_items) {
-            for (int j = 0; j < room[player.location].items.size(); j++) {
-                if (item_name[i] == item_name[j]) {
-                    player.items.push_back((item)i);
-                    room[player.location].items.erase(room[player.location].items.begin() + j);
-                    return;
-                }
-            }
-        }
-
-    }
-
-}//test
 
 
 int main()
