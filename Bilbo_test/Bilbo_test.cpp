@@ -150,7 +150,7 @@ int main()
 
             std::cin >> cmd;
 
-            pick_by_name(cmd);
+            pick_by_name(cmd);//
             cout << "done";
             //player.items.emplace_back(room[player.location].items[i]);
             //player.items.push_back(item::);
