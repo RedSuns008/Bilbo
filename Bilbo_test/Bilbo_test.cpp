@@ -43,7 +43,7 @@ void pick_by_name(string name_items) {
 
     }
 
-}
+}//test
 
 
 int main()

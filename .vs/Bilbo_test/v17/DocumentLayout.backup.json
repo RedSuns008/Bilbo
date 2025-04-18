@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\student-2\\source\\repos\\Bilbo_test\\",
+  "WorkspaceRootPath": "C:\\Users\\student-1\\source\\repos\\Bilbo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{114FC3ED-EB22-43BD-AB86-82F39AFCEC17}|Bilbo_test\\Bilbo_test.vcxproj|C:\\Users\\student-2\\source\\repos\\Bilbo_test\\Bilbo_test\\Bilbo_test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{114FC3ED-EB22-43BD-AB86-82F39AFCEC17}|Bilbo_test\\Bilbo_test.vcxproj|C:\\Users\\student-1\\source\\repos\\Bilbo\\Bilbo_test\\Bilbo_test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{114FC3ED-EB22-43BD-AB86-82F39AFCEC17}|Bilbo_test\\Bilbo_test.vcxproj|solutionrelative:Bilbo_test\\Bilbo_test.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -14,8 +14,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 10,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -45,18 +57,14 @@
               "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Bilbo_test.cpp",
-              "DocumentMoniker": "C:\\Users\\student-2\\source\\repos\\Bilbo_test\\Bilbo_test\\Bilbo_test.cpp",
+              "DocumentMoniker": "C:\\Users\\student-1\\source\\repos\\Bilbo\\Bilbo_test\\Bilbo_test.cpp",
               "RelativeDocumentMoniker": "Bilbo_test\\Bilbo_test.cpp",
-              "ToolTip": "C:\\Users\\student-2\\source\\repos\\Bilbo_test\\Bilbo_test\\Bilbo_test.cpp",
+              "ToolTip": "C:\\Users\\student-1\\source\\repos\\Bilbo\\Bilbo_test\\Bilbo_test.cpp",
               "RelativeToolTip": "Bilbo_test\\Bilbo_test.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABBAAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFQAAABsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-13T13:57:46.437Z",
               "EditorCaption": ""
